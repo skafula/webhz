@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Termékrendelés</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+
+
+    <form name="termekrendeles" action="php/feldolgoz.php" onsubmit="return check();" method="post">
+        <div>
+            <h1>Termékrendelés</h1>
+            <h2>Termék - Laptop-01</h2>
+            <img class="image" src="images/laptop.jpg" alt="laptop image" width="300px" height="200">
+            <label>Név: </label><input type="text" id="nev" name="nev" size="30" minlength="8" maxlength="30" required><br/>
+
+            <label>E-mail: </label><input type="text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="30" maxlength="40"><br/>
+
+            <label>Darab: </label><input type="number" id="darab" name="darab" size="7" min="1" max="10" required><br/>
+
+            <label for="nap">Nap:</label><select id="nap" name="nap" style="width: 100px" required>
+                <option value="" selected></option>
+                <option value="hétfő">hétfő</option>
+                <option value="kedd">kedd</option>
+                <option value="szerda">szerda</option>
+                <option value="csütörtök">csütörtök</option>
+                <option value="péntek">péntek</option>
+            </select>
+
+            <input  id="kuld" type="submit" value="Küldés">
+
+
+
+        </div>
+
+    </form>
+
+</body>
+</html>
